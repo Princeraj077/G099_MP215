@@ -1,0 +1,155 @@
+{
+  "findings": {
+    "leaking_column": {
+      "present": false,
+      "columns": []
+    },
+    "unit_mixup": {
+      "present": true,
+      "group_column": "shift",
+      "group_value": "Evening",
+      "column": "picker_exp_months",
+      "source_unit": "days",
+      "expected_unit": "months",
+      "factor": 30,
+      "affected_rows": 322
+    },
+    "sentinel_value": {
+      "present": false,
+      "values_found": {}
+    },
+    "duplicate_rows": {
+      "present": false,
+      "count": 0
+    },
+    "stuck_sensor": {
+      "present": true,
+      "runs": [
+        {
+          "column": "shelf_height_m",
+          "value": 1.62,
+          "rows": 86,
+          "start_date": "2026-03-20",
+          "end_date": "2026-04-04",
+          "first_record_id": "R00430",
+          "last_record_id": "R00515"
+        }
+      ]
+    },
+    "target_typos": {
+      "present": true,
+      "count": 9,
+      "rows": [
+        {
+          "record_id": "R00016",
+          "date": "2026-01-02",
+          "original_value": 2920.0,
+          "corrected_value": 292.0
+        },
+        {
+          "record_id": "R00191",
+          "date": "2026-02-04",
+          "original_value": 3030.0,
+          "corrected_value": 303.0
+        },
+        {
+          "record_id": "R00237",
+          "date": "2026-02-11",
+          "original_value": 2700.0,
+          "corrected_value": 270.0
+        },
+        {
+          "record_id": "R00246",
+          "date": "2026-02-12",
+          "original_value": 3990.0,
+          "corrected_value": 399.0
+        },
+        {
+          "record_id": "R00271",
+          "date": "2026-02-16",
+          "original_value": 1890.0,
+          "corrected_value": 189.0
+        },
+        {
+          "record_id": "R00595",
+          "date": "2026-04-21",
+          "original_value": 3600.0,
+          "corrected_value": 360.0
+        },
+        {
+          "record_id": "R00646",
+          "date": "2026-04-29",
+          "original_value": 2400.0,
+          "corrected_value": 240.0
+        },
+        {
+          "record_id": "R00731",
+          "date": "2026-05-13",
+          "original_value": 2050.0,
+          "corrected_value": 205.0
+        },
+        {
+          "record_id": "R00983",
+          "date": "2026-06-28",
+          "original_value": 1400.0,
+          "corrected_value": 140.0
+        }
+      ]
+    },
+    "spelling_variants": {
+      "present": true,
+      "column": "zone_type",
+      "true_levels": 3,
+      "raw_levels": {
+        "chilled": 396,
+        "bulky": 287,
+        "ambient": 167,
+        "chi.": 20,
+        " chilled": 15,
+        "bulky ": 14,
+        "Chilled": 13,
+        "BULKY": 12,
+        " bulky": 12,
+        "chilled ": 11,
+        "CHILLED": 10,
+        " ambient": 9,
+        "Ambient": 8,
+        "Bulky": 7,
+        "bul.": 7,
+        "amb.": 5,
+        "AMBIENT": 4,
+        "ambient ": 3
+      },
+      "clean_levels": [
+        "ambient",
+        "bulky",
+        "chilled"
+      ]
+    }
+  },
+  "cleaning_summary": {
+    "rows_before": 1000,
+    "rows_after": 1000,
+    "duplicate_rows_removed": 0,
+    "evening_experience_rows_converted": 322,
+    "stuck_sensor_runs_corrected": [
+      {
+        "column": "shelf_height_m",
+        "value": 1.62,
+        "rows": 86,
+        "start_date": "2026-03-20",
+        "end_date": "2026-04-04",
+        "first_record_id": "R00430",
+        "last_record_id": "R00515"
+      }
+    ],
+    "target_typos_corrected": 9,
+    "zone_type_levels_after_cleaning": [
+      "ambient",
+      "bulky",
+      "chilled"
+    ],
+    "pick_seconds_min_after_cleaning": 53.0,
+    "pick_seconds_max_after_cleaning": 517.0
+  }
+}
