@@ -1,0 +1,71 @@
+group_id: "G099"
+problem_id: "MP215"
+
+data_issues:
+  leaking_column:
+    present: false
+    column: null
+
+  unit_mixup:
+    present: true
+    column: picker_exp_months
+    group_value: Evening
+    factor: 30
+
+  sentinel_value:
+    present: false
+    column: null
+    value: null
+    count: null
+
+  duplicate_rows:
+    present: false
+    count: null
+
+  stuck_sensor:
+    present: true
+    column: shelf_height_m
+    start_date: "2026-03-20"
+    end_date: "2026-04-04"
+
+  target_typos:
+    present: true
+    count: 9
+
+  spelling_variants:
+    present: true
+    column: zone_type
+    true_levels: 3
+
+tracking:
+  experiment_name: warehouse_pick_prediction
+
+  best_run_id: ab07ebe2cced49b9aa2d195e8b5ec9b3
+
+  registered_model_name: warehouse_pick_model
+
+  champion_version: 2
+
+monitoring:
+  psi:
+    items_in_order: 2.6894
+    aisle_distance_m: 0.0839
+    picker_exp_months: 0.0223
+    shelf_height_m: 0.0821
+    shift_hour: 0.0209
+    order_weight_kg: 0.1151
+
+  most_drifted_feature: items_in_order
+
+  mae_by_group:
+    Morning: 22.3737
+    Evening: 24.2491
+    Night: 150.0597
+
+  worst_served_group: Night
+
+  mae_v1_on_check: 39.61784982483552
+
+  mae_v2_on_check: 23.1960569464763
+
+  decision: promote
